@@ -1,9 +1,11 @@
+@use '../../sass_variables/variables';
+
 .navbar-container {
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: variables.$navbarHeight;
     border-bottom: solid black 2px;
 }
 
