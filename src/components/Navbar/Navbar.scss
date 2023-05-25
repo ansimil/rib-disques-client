@@ -1,0 +1,40 @@
+
+
+.navbar-container {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    border-bottom: solid black 2px;
+}
+
+.logo-icon {
+    font-size: 3rem;
+    color: black;
+    margin-left: 4rem;
+}
+
+.navbar-container > * {
+    flex: 1
+}
+
+.navbar-right__links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 4rem;
+    margin-right: 4rem;
+}
+
+.navbar-right__links a {
+    color: black;
+    padding: 1rem 0;
+    font-family: mainFont;
+    font-weight: 800;
+}
+
+.navbar-right__links a:hover {
+    border-bottom: solid black 2px;
+}
