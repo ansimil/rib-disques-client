@@ -47,6 +47,8 @@
             }
         ],
         "format": "cassette",
-        "releaseYear": "2023"
+        "releaseYear": "2023",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     }
 ]
