@@ -3,4 +3,8 @@
 .releases-container {
     min-height: calc(100vh - variables.$navbarHeight);
     color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
 }

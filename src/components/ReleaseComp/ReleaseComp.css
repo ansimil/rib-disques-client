@@ -1,0 +1,47 @@
+.release-comp-summary {
+  width: 100vw;
+  height: 65px;
+  border-bottom: solid black 2px;
+  font-family: mainFont;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: 500ms;
+}
+
+.release-title {
+  flex: 1;
+}
+
+.release-artist-name {
+  margin-left: 3rem;
+}
+
+.release-year {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+}
+
+.release-comp-details-inner {
+  display: flex;
+  align-items: center;
+}
+
+.release-tracklist-list {
+  list-style: none;
+}
+
+.release-tracklist-list__element {
+  font-family: mainFont;
+}
+
+.release-comp-details[open] {
+  border-bottom: solid black 2px;
+}
+.release-comp-details[open] .release-comp-summary {
+  background: black;
+  color: #f0fff8; /* almost white */
+  text-shadow: 0 0 10px #00ff66, 0 0 20px #00ff66;
+}/*# sourceMappingURL=ReleaseComp.css.map */
