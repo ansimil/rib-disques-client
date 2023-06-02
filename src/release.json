@@ -4,24 +4,33 @@
         "releaseName": "Rib Album 1",
         "tracklist": [
             {
-                "trackName": "Track 1",
+                "trackName": "Intro",
                 "length": "1:00"
             },
             {
-                "trackName": "Track 2",
+                "trackName": "Leise im Kran",
                 "length": "2:00"
             },
             {
-                "trackName": "Track 3",
+                "trackName": "Robotron",
                 "length": "3:00"
             },
             {
-                "trackName": "Track 4",
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
                 "length": "4:00"
             }
         ],
         "format": "cassette",
         "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
         "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
@@ -30,24 +39,208 @@
         "releaseName": "Rib Album 2",
         "tracklist": [
             {
-                "trackName": "Track 1",
+                "trackName": "Intro",
                 "length": "1:00"
             },
             {
-                "trackName": "Track 2",
+                "trackName": "Leise im Kran",
                 "length": "2:00"
             },
             {
-                "trackName": "Track 3",
+                "trackName": "Robotron",
                 "length": "3:00"
             },
             {
-                "trackName": "Track 4",
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
                 "length": "4:00"
             }
         ],
         "format": "cassette",
         "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
+    },
+    {
+        "artistName": "Rib Disques 2",
+        "releaseName": "Rib Album 2",
+        "tracklist": [
+            {
+                "trackName": "Intro",
+                "length": "1:00"
+            },
+            {
+                "trackName": "Leise im Kran",
+                "length": "2:00"
+            },
+            {
+                "trackName": "Robotron",
+                "length": "3:00"
+            },
+            {
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
+                "length": "4:00"
+            }
+        ],
+        "format": "cassette",
+        "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
+    },
+    {
+        "artistName": "Rib Disques 2",
+        "releaseName": "Rib Album 2",
+        "tracklist": [
+            {
+                "trackName": "Intro",
+                "length": "1:00"
+            },
+            {
+                "trackName": "Leise im Kran",
+                "length": "2:00"
+            },
+            {
+                "trackName": "Robotron",
+                "length": "3:00"
+            },
+            {
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
+                "length": "4:00"
+            }
+        ],
+        "format": "cassette",
+        "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
+    },
+    {
+        "artistName": "Rib Disques 2",
+        "releaseName": "Rib Album 2",
+        "tracklist": [
+            {
+                "trackName": "Intro",
+                "length": "1:00"
+            },
+            {
+                "trackName": "Leise im Kran",
+                "length": "2:00"
+            },
+            {
+                "trackName": "Robotron",
+                "length": "3:00"
+            },
+            {
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
+                "length": "4:00"
+            }
+        ],
+        "format": "cassette",
+        "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
+    },
+    {
+        "artistName": "Rib Disques 2",
+        "releaseName": "Rib Album 2",
+        "tracklist": [
+            {
+                "trackName": "Intro",
+                "length": "1:00"
+            },
+            {
+                "trackName": "Leise im Kran",
+                "length": "2:00"
+            },
+            {
+                "trackName": "Robotron",
+                "length": "3:00"
+            },
+            {
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
+                "length": "4:00"
+            }
+        ],
+        "format": "cassette",
+        "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
+        "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
+        "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
+    },
+    {
+        "artistName": "Rib Disques 2",
+        "releaseName": "Rib Album 2",
+        "tracklist": [
+            {
+                "trackName": "Intro",
+                "length": "1:00"
+            },
+            {
+                "trackName": "Leise im Kran",
+                "length": "2:00"
+            },
+            {
+                "trackName": "Robotron",
+                "length": "3:00"
+            },
+            {
+                "trackName": "Leise im Kran (Koda)",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Reformator",
+                "length": "4:00"
+            },
+            {
+                "trackName": "Tagwerk",
+                "length": "4:00"
+            }
+        ],
+        "format": "cassette",
+        "releaseYear": "2023",
+        "artworkUrl": "https://res.cloudinary.com/dxvof8226/image/upload/v1685665488/Release%20Artwork/LIK_j-card3_ordered_v7m9ae.png",
         "bandcampUrl": "https://ribdisques.bandcamp.com/album/rib-disques-no-1",
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     }

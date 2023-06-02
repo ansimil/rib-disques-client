@@ -1,13 +1,16 @@
-import './Releases.css'
-import ReleaseComp from '@/components/ReleaseComp/ReleaseComp'
-import releases from '../../release.json'
+'use client';
+
+import './Releases.css';
+import ReleaseComp from '@/components/ReleaseComp/ReleaseComp';
+import releases from '../../release.json';
+import uuid from 'react-uuid';
 
 const Releases = () => {
   return (
     <div className='releases-container'>
-        {releases.map(release => {
+        {releases.map((release, i) => {
           return (
-            <ReleaseComp release={release}/>
+            <ReleaseComp key={uuid()} release={release} idx={i}/>
           )
         })}
     </div>

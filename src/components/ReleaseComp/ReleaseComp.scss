@@ -27,14 +27,28 @@
 .release-comp-details-inner {
     display: flex;
     align-items: center;
+    padding: 2rem;
 }
 
-.release-tracklist-list {
-    list-style: none;
+.release-comp-details-inner > * {
+    flex: 1;
+}
+
+.release-comp-tracklist-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .release-tracklist-list__element {
     font-family: mainFont;
+    line-height: 2rem;
+}
+
+.release-artwork__img {
+    width: 300px;
+    aspect-ratio: 105 / 101.5;
 }
 
 .release-comp-details[open] {
@@ -42,6 +56,6 @@
     .release-comp-summary {
         background: black;
         color: #f0fff8; /* almost white */
-        text-shadow:0 0 10px #00ff66, 0 0 20px #00ff66,
+        // text-shadow:0 0 10px #00ff66, 0 0 20px #00ff66,
     }
 }
