@@ -2,6 +2,7 @@
 
 import BandcampPlayer from '../BandcampPlayer/BandcampPlayer'
 import uuid from 'react-uuid';
+import Link from 'next/link';
 import './ReleaseComp.css'
 
 const ReleaseComp = ({ release, idx }) => {
@@ -32,13 +33,17 @@ const ReleaseComp = ({ release, idx }) => {
                     </div>
                     <BandcampPlayer release={release}/>
                     <div className='release-comp-tracklist-container'>
-                        <ol className='release-tracklist-list'>
-                            {release.tracklist.map(track => {
-                                return (
-                                    <li key={uuid()} className='release-tracklist-list__element'>{track.trackName}</li>
-                                )
-                            })}
-                        </ol>
+                        <div className='release-comp-tracklist-inner'>
+                            <ol className='release-tracklist-list'>
+                                {release.tracklist.map(track => {
+                                    return (
+                                        <li key={uuid()} className='release-tracklist-list__element'>{track.trackName}</li>
+                                    )
+                                })}
+                            </ol>
+                            <Link className='release-buy-btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
+                        </div>
+                        
                     </div>
                 </div>
                 

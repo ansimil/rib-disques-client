@@ -43,7 +43,28 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.release-comp-tracklist-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-start;
+}
+
+.release-buy-btn {
+    margin-top: 1rem;
+    font-family: mainFont;
+    padding: 0.5rem 1rem;
+    border: solid black 1px;
+    color: black;
+    transition: 500ms;
+}
+
+.release-buy-btn:hover {
+    color: white;
+    background-color: black;
 }
 
 .release-tracklist-list__element {
