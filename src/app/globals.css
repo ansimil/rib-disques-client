@@ -126,3 +126,25 @@ a {
   font-family: mainFont;
   src: url('../assets/fonts/ProFontWindows/ProFontWindows.ttf');
 }
+
+@font-face {
+  font-family: ChillaxFont;
+  src: url('../assets/fonts/Chillax/Fonts/OTF/Chillax-Regular.otf');
+}
+
+@font-face {
+  font-family: ChakraPetchFont;
+  src: url('../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf');
+}
+
+.home-container * {
+  font-family: mainFont;
+}
+
+.chillax * {
+    font-family: ChillaxFont;
+}
+
+.chakra-petch * {
+    font-family: ChakraPetchFont;
+}
