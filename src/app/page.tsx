@@ -1,11 +1,9 @@
-import Image from 'next/image'
-import styles from './page.module.css'
 import Navbar from '@/components/Navbar/Navbar'
 import Releases from '../pages/Releases/Releases'
 
-export default function Home() {
+export default function Home({ font }: {font: String}) {
   return (
-    <div>
+    <div className={`home-container ${font}`}>
       <Navbar />
       <Releases />
     </div>

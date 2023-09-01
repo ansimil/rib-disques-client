@@ -11,6 +11,7 @@
   font-size: 2rem;
   color: black;
   margin-left: 4rem;
+  font-family: "__Inter_0ec1f4", "__Inter_Fallback_0ec1f4" !important;
 }
 
 .navbar-container > * {
@@ -29,7 +30,6 @@
 .navbar-right__links a {
   color: black;
   padding: 1rem 0;
-  font-family: mainFont;
   font-weight: 800;
 }
 
