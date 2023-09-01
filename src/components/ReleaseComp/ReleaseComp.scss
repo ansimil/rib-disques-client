@@ -10,12 +10,18 @@
     transition: 500ms;
 }
 
+.release-comp-summary:hover {
+    background-color: rgba(0, 0, 0, 0.083);
+}
+
 .release-title {
     flex: 1;
+    font-size: 0.8rem;
 }
 
 .release-artist-name {
     margin-left: 3rem;
+    font-weight: 800;
 }
 
 .release-year {
