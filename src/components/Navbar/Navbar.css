@@ -11,8 +11,26 @@
   margin-left: 3rem;
   max-height: 60px;
   aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
+.rib-navbar-logo:hover {
+  /* animation properties */
+  animation-name: my-animation;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes my-animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
 .navbar-container > * {
   flex: 1;
 }

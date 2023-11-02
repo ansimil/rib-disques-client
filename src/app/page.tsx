@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar/Navbar'
-import Releases from '../pages/Releases/Releases'
+import Releases from '../components/Releases/Releases'
 
 export default function Home({ font }: {font: String}) {
   return (

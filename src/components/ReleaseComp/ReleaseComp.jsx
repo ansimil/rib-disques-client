@@ -3,9 +3,35 @@
 import BandcampPlayer from '../BandcampPlayer/BandcampPlayer'
 import uuid from 'react-uuid';
 import Link from 'next/link';
+// import { getAverageColor } from 'fast-average-color-node';
+import { useRef } from 'react';
 import './ReleaseComp.css'
 
+
+
 const ReleaseComp = ({ release, idx }) => {
+    // let fac = new fastColor();
+    const ref = useRef(null)
+    // async function printAverageColor() {
+    //     const color = await getAverageColor(release.artworkUrl);
+    //     console.log(color);
+    // };
+    
+    // printAverageColor();
+    // const container = ref.current;
+
+    // fac.getColorAsync(release.artworkUrl)
+    // .then(color => {
+    //     if (container) {
+    //         container.style.backgroundColor = color.rgba;
+    //         container.style.color = color.isDark ? '#fff' : '#000';
+    //     }
+        
+    // })
+    // .catch(e => {
+    //     console.log(e);
+    // });
+
     return (       
         <details
         id={`release${idx}`}
@@ -27,7 +53,7 @@ const ReleaseComp = ({ release, idx }) => {
                 <div className='release-format release-title'>{release.format}</div>
                 <div className='release-year release-title'>{release.releaseYear}</div>
             </summary>
-                <div className='release-comp-details-inner'>
+                <div className='release-comp-details-inner' ref={ref}>
                     <div className='release-comp-artwork-container'>
                         <img className='release-artwork__img' src={release.artworkUrl} alt={`${release.releaseName}-artwork`} />
                     </div>

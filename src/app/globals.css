@@ -137,7 +137,7 @@ a {
   src: url('../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf');
 }
 
-.home-container * {
+.home-container *, .about-container *, .contact-container * {
   font-family: mainFont;
 }
 
