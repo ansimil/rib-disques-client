@@ -3,7 +3,7 @@
 import { useRouter } from 'next/navigation';
 
 
-export default function HomeLogo({ font }: {font: String}) {
+export default function HomeLogo() {
   const router = useRouter()
 
   return (
