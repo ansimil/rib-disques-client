@@ -5,25 +5,30 @@ import uuid from 'react-uuid';
 import Link from 'next/link';
 import './ReleaseComp.css';
 import ColorThief from 'colorthief/dist/color-thief.mjs';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import isDarkColor from 'is-dark-color';
 
 
 const ReleaseComp = ({ release, idx }) => {
+    const [ paletteState, setPaletteState ] = useState()
+    const [ paletteIdx, setPaletteIdx ] = useState()
+    const [ isOpen, setIsOpen ] = useState(false)
     const imgRef = useRef(null)
     const bgRef = useRef(null)
     let colorThief = new ColorThief();
     
-    const getTheColor = (img) => {
-        const palette = colorThief.getPalette(img, 4)
+    const getTheColor = (palette) => {
         const i = Math.floor(Math.random() * (palette.length))
+        setPaletteIdx(i)
         const r = palette[i][0]
         const g = palette[i][1]
         const b = palette[i][2]
-        bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
-        const isDark = isDarkColor(rgbToHex(r,g,b))
-        console.log(r,g,b, rgbToHex(r,g,b), isDark, release.artistName)
-        if (isDark){
+
+        bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b}, 0.5)`
+        
+        if (isDarkColor(rgbToHex(r,g,b))){
+            const parentEl = document.getElementById(`release${idx}`)
+            parentEl.firstChild.classList.add('dark-summary')
             bgRef.current.classList.add('dark-bg')
             let btns = bgRef.current.querySelectorAll('.btn')
             btns.forEach(btn => {
@@ -49,7 +54,9 @@ const ReleaseComp = ({ release, idx }) => {
     useEffect(()=>{
         if (imgRef.current) {
             if (imgRef.current.complete) {
-                getTheColor(imgRef.current)
+                const palette = colorThief.getPalette(imgRef.current, 4)
+                setPaletteState(palette)
+                getTheColor(palette)
             }
         }
     },[])
@@ -60,11 +67,21 @@ const ReleaseComp = ({ release, idx }) => {
         className="release-comp-details">
             <summary 
             onClick={()=> {
+                const parentEl = document.getElementById(`release${idx}`)
+                setIsOpen(!isOpen)
+                if (isOpen) {
+                    parentEl.firstChild.style.backgroundColor = "white"
+                }
+                else {
+                    parentEl.firstChild.style.backgroundColor = `rgb(${paletteState[paletteIdx][0]}, ${paletteState[paletteIdx][1]}, ${paletteState[paletteIdx][2]})`
+                }
                 const releaseEls = document.getElementsByClassName("release-comp-details")
                 const keys = Object.keys(releaseEls)
                 keys.forEach(key => {
                         if (releaseEls[key].id !== `release${idx}`){
                             releaseEls[key].open = false
+                            releaseEls[key].firstChild.style.backgroundColor = "white"
+                            setIsOpen(false)
                         }
                 })
             }}

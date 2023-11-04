@@ -109,7 +109,10 @@
 }
 .release-comp-details[open] .release-comp-summary {
   background: black;
-  color: #f0fff8; /* almost white */
+  color: black; /* almost white */
+}
+.release-comp-details[open] .dark-summary {
+  color: white;
 }
 
 .dark-bg {

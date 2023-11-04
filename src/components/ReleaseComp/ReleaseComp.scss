@@ -84,11 +84,15 @@
     border-bottom: solid black 2px;
     .release-comp-summary {
         background: black;
-        color: #f0fff8; /* almost white */
+        color: black; /* almost white */
         // text-shadow:0 0 10px #00ff66, 0 0 20px #00ff66,
+    }
+    .dark-summary {
+        color: white;
     }
 }
 
 .dark-bg {
     color: white;
 }
+
