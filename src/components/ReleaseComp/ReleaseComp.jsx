@@ -5,7 +5,7 @@ import uuid from 'react-uuid';
 import Link from 'next/link';
 import './ReleaseComp.css';
 import ColorThief from 'colorthief/dist/color-thief.mjs';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import isDarkColor from 'is-dark-color';
 
 
@@ -46,22 +46,23 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
     
-    useEffect(()=>{
-        // if (imgRef.current) {
-        //     if (imgRef.current.complete) {
-        const palette = colorThief.getColor(imgRef.current)
-        getTheColor(palette)
-        //     }
-        // }
-    },[imgRef.current?.complete])
+    // useEffect(()=>{
+    //     // if (imgRef.current) {
+    //     //     if (imgRef.current.complete) {
+    //     // const palette = colorThief.getColor(imgRef.current)
+    //     // getTheColor(palette)
+    //     //     }
+    //     // }
+    // },[])
 
     return (       
         <details
         id={`release${idx}`}
         className="release-comp-details">
             <summary 
-            onClick={()=> {
+            onClick={()=> {                
                 const color = colorThief.getColor(imgRef.current)
+                getTheColor(color)
                 const parentEl = document.getElementById(`release${idx}`)
                 if (parentEl.open) {
                     parentEl.firstChild.style.backgroundColor = "white"
