@@ -17,6 +17,10 @@ const Navbar = () => {
             router.push('/home')
           }} 
           />
+          <div className='rib-navbar-text'>
+            <p>rib</p>
+            <p>disques</p>
+          </div>
         </div>
         <div className='navbar-right-container'>
           <ul className='navbar-right__links'>

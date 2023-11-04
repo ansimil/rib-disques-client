@@ -137,6 +137,16 @@ a {
   src: url('../assets/fonts/Chakra_Petch/ChakraPetch-Regular.ttf');
 }
 
+@font-face {
+  font-family: IBM;
+  src: url('../assets/fonts/IBM_Plex_Sans/IBMPlexSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: Kanit;
+  src: url('../assets/fonts/Kanit/Kanit-Regular.ttf');
+}
+
 .home-container *, .about-container *, .contact-container * {
   font-family: mainFont;
 }
@@ -147,6 +157,10 @@ a {
 
 .chakra-petch * {
   font-family: ChakraPetchFont;
+}
+
+.ibm * {
+  font-family: IBM;
 }
 
 .home-logo-container {
