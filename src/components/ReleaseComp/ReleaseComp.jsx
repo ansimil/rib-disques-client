@@ -3,35 +3,57 @@
 import BandcampPlayer from '../BandcampPlayer/BandcampPlayer'
 import uuid from 'react-uuid';
 import Link from 'next/link';
-// import { getAverageColor } from 'fast-average-color-node';
-import { useRef } from 'react';
-import './ReleaseComp.css'
-
+import './ReleaseComp.css';
+import ColorThief from 'colorthief/dist/color-thief.mjs';
+import { useEffect, useRef } from 'react';
+import isDarkColor from 'is-dark-color';
 
 
 const ReleaseComp = ({ release, idx }) => {
-    // let fac = new fastColor();
-    const ref = useRef(null)
-    // async function printAverageColor() {
-    //     const color = await getAverageColor(release.artworkUrl);
-    //     console.log(color);
-    // };
+    const imgRef = useRef(null)
+    const bgRef = useRef(null)
+    let colorThief = new ColorThief();
     
-    // printAverageColor();
-    // const container = ref.current;
-
-    // fac.getColorAsync(release.artworkUrl)
-    // .then(color => {
-    //     if (container) {
-    //         container.style.backgroundColor = color.rgba;
-    //         container.style.color = color.isDark ? '#fff' : '#000';
-    //     }
-        
-    // })
-    // .catch(e => {
-    //     console.log(e);
-    // });
-
+    const getTheColor = (img) => {
+        const palette = colorThief.getPalette(img, 4)
+        const i = Math.floor(Math.random() * (palette.length))
+        const r = palette[i][0]
+        const g = palette[i][1]
+        const b = palette[i][2]
+        bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b})`
+        const isDark = isDarkColor(rgbToHex(r,g,b))
+        console.log(r,g,b, rgbToHex(r,g,b), isDark, release.artistName)
+        if (isDark){
+            bgRef.current.classList.add('dark-bg')
+            let btns = bgRef.current.querySelectorAll('.btn')
+            btns.forEach(btn => {
+                btn.classList.add('light-btn')
+            })
+        }
+        else {
+            let btns = bgRef.current.querySelectorAll('.btn')
+            btns.forEach(btn => {
+                btn.classList.add('dark-btn')
+            })
+        }
+    }
+    function componentToHex(c) {
+        var hex = c.toString(16);
+        return hex.length == 1 ? "0" + hex : hex;
+    }
+    
+    function rgbToHex(r, g, b) {
+        return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+    }
+    
+    useEffect(()=>{
+        if (imgRef.current) {
+            if (imgRef.current.complete) {
+                getTheColor(imgRef.current)
+            }
+        }
+    },[])
+    
     return (       
         <details
         id={`release${idx}`}
@@ -48,14 +70,21 @@ const ReleaseComp = ({ release, idx }) => {
             }}
             className="release-comp-summary"
             >
+                <div className='release-release-id release-title'>{release.releaseId}</div>
                 <div className='release-artist-name release-title'>{release.artistName}</div>
                 <div className='release-album-name release-title'>{release.releaseName}</div>
                 <div className='release-format release-title'>{release.format}</div>
                 <div className='release-year release-title'>{release.releaseYear}</div>
             </summary>
-                <div className='release-comp-details-inner' ref={ref}>
+                <div ref={bgRef} className='release-comp-details-inner'>
                     <div className='release-comp-artwork-container'>
-                        <img className='release-artwork__img' src={release.artworkUrl} alt={`${release.releaseName}-artwork`} />
+                        <img
+                        ref={imgRef} 
+                        className='release-artwork__img' 
+                        src={release.artworkUrl} 
+                        alt={`${release.releaseName}-artwork`} 
+                        crossOrigin='Anonymous'    
+                        />
                     </div>
                     <BandcampPlayer release={release}/>
                     <div className='release-comp-tracklist-container'>
@@ -67,7 +96,7 @@ const ReleaseComp = ({ release, idx }) => {
                                     )
                                 })}
                             </ol>
-                            <Link className='release-buy-btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
+                            <Link className='release-buy-btn btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
                         </div>
                         
                     </div>

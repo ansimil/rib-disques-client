@@ -14,7 +14,7 @@ const Navbar = () => {
           className="rib-navbar-logo" 
           src="https://res.cloudinary.com/dxvof8226/image/upload/v1698837362/RIB_HEART_PNG_4x_ipr8vl.png"
           onClick={()=> {
-            router.push('/')
+            router.push('/home')
           }} 
           />
         </div>

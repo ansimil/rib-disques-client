@@ -142,9 +142,37 @@ a {
 }
 
 .chillax * {
-    font-family: ChillaxFont;
+  font-family: ChillaxFont;
 }
 
 .chakra-petch * {
-    font-family: ChakraPetchFont;
+  font-family: ChakraPetchFont;
+}
+
+.home-logo-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-logo-container .rib-navbar-logo {
+  width: 35%;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  animation-name: my-animation;
+  animation-duration: 0.5s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes my-animation {
+  from {
+      transform: scale(1);
+  }
+  to {
+      transform: scale(1.1);
+  }
 }

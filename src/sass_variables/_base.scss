@@ -1,0 +1,31 @@
+@use './variables';
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: solid 1px;
+}
+
+.dark-btn {
+    border-color: variables.$dark-primary-color;
+    background-color: transparent;
+    color: variables.$dark-primary-color;
+
+    &:hover {
+        border-color: variables.$light-primary-color;
+        background-color: variables.$dark-primary-color;
+        color: variables.$light-primary-color;
+    }
+}
+
+.light-btn {
+    border-color: variables.$light-primary-color;
+    background-color: transparent;
+    color: variables.$light-primary-color;
+
+    &:hover {
+        border-color: variables.$dark-primary-color;
+        background-color: variables.$light-primary-color;
+        color: variables.$dark-primary-color;  
+    }
+}
+
