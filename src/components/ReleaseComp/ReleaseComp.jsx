@@ -51,18 +51,14 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
     }
     
     useEffect(()=>{
-        if (imgRef.current) {
-            if (imgRef.current.complete) {
+        // if (imgRef.current) {
+        //     if (imgRef.current.complete) {
                 const palette = colorThief.getPalette(imgRef.current, 4)
                 setPaletteState(palette)
                 getTheColor(palette)
-            }
-        }
+        //     }
+        // }
     },[])
-    
-    !paletteState && (
-        <div>hello</div>
-    )
 
     return (       
         <details
