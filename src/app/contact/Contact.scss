@@ -1,0 +1,9 @@
+@use '../../sass_variables/variables';
+
+.contact-inner-container {
+    width: 100%;
+    height: calc(100vh - variables.$navbarHeight);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

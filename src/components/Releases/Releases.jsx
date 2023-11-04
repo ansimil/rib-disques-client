@@ -8,6 +8,7 @@ import uuid from 'react-uuid';
 const Releases = () => {
   return (
     <div className='releases-container'>
+        
         {releases.map((release, i) => {
           return (
             <ReleaseComp key={uuid()} release={release} idx={i}/>

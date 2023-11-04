@@ -23,6 +23,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/pages/Releases/Releases.jsx", "src/components/ReleaseComp/ReleaseComp.jsx", "src/components/BandcampPlayer/BandcampPlayer.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Releases/Releases.jsx", "src/components/ReleaseComp/ReleaseComp.jsx", "src/components/BandcampPlayer/BandcampPlayer.jsx"],
   "exclude": ["node_modules"]
 }
