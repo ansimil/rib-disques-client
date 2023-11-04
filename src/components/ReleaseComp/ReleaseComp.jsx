@@ -9,10 +9,9 @@ import { useEffect, useRef, useState } from 'react';
 import isDarkColor from 'is-dark-color';
 
 
-const ReleaseComp = ({ release, idx }) => {
+const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
     const [ paletteState, setPaletteState ] = useState()
     const [ paletteIdx, setPaletteIdx ] = useState()
-    const [ isOpen, setIsOpen ] = useState(false)
     const imgRef = useRef(null)
     const bgRef = useRef(null)
     let colorThief = new ColorThief();
@@ -61,6 +60,10 @@ const ReleaseComp = ({ release, idx }) => {
         }
     },[])
     
+    !paletteState && (
+        <div>hello</div>
+    )
+
     return (       
         <details
         id={`release${idx}`}
@@ -68,8 +71,7 @@ const ReleaseComp = ({ release, idx }) => {
             <summary 
             onClick={()=> {
                 const parentEl = document.getElementById(`release${idx}`)
-                setIsOpen(!isOpen)
-                if (isOpen) {
+                if (parentEl.open) {
                     parentEl.firstChild.style.backgroundColor = "white"
                 }
                 else {
@@ -81,7 +83,6 @@ const ReleaseComp = ({ release, idx }) => {
                         if (releaseEls[key].id !== `release${idx}`){
                             releaseEls[key].open = false
                             releaseEls[key].firstChild.style.backgroundColor = "white"
-                            setIsOpen(false)
                         }
                 })
             }}
@@ -103,7 +104,7 @@ const ReleaseComp = ({ release, idx }) => {
                         crossOrigin='Anonymous'    
                         />
                     </div>
-                    <BandcampPlayer release={release}/>
+                    {/* <BandcampPlayer release={release}/> */}
                     <div className='release-comp-tracklist-container'>
                         <div className='release-comp-tracklist-inner'>
                             <ol className='release-tracklist-list'>
