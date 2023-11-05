@@ -38,10 +38,6 @@
   padding-right: 3rem;
 }
 
-.release-comp-summary:hover {
-  background-color: rgba(0, 0, 0, 0.083);
-}
-
 .release-title {
   flex: 1;
   font-size: 1rem;
@@ -104,12 +100,39 @@
   aspect-ratio: 105/101.5;
 }
 
+.release-comp-details:not([open]) .release-comp-summary:hover {
+  background-color: rgba(0, 0, 0, 0.083) !important;
+}
+.release-comp-details:not([open]):focus-visible {
+  border-bottom: none;
+}
+.release-comp-details:not([open]):focus-visible .release-comp-summary {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details:not([open]):focus-visible .release-comp-summary > * {
+  color: blue !important;
+}
+.release-comp-details:not([open]) .release-comp-summary:focus-visible {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details:not([open]) .release-comp-summary:focus-visible > * {
+  color: blue !important;
+}
+
 .release-comp-details[open] {
   border-bottom: solid black 2px;
 }
-.release-comp-details[open] .release-comp-summary {
-  background: black;
-  color: black; /* almost white */
+.release-comp-details[open]:focus-visible {
+  border-bottom: none;
+}
+.release-comp-details[open]:focus-visible .release-comp-summary, .release-comp-details[open]:focus-visible .release-comp-summary:focus-visible {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details[open]:focus-visible .release-comp-summary > *, .release-comp-details[open]:focus-visible .release-comp-summary:focus-visible > * {
+  color: blue;
 }
 .release-comp-details[open] .dark-summary {
   color: white;
