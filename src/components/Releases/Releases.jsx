@@ -4,8 +4,7 @@ import './Releases.css';
 import ReleaseComp from '@/components/ReleaseComp/ReleaseComp';
 import releases from '../../release.json';
 import uuid from 'react-uuid';
-import { useEffect, useState } from 'react';
-import Speech from 'react-speech';
+import { useState } from 'react';
 
 const Releases = () => {
   const [ openStates, setOpenStates ] = useState([])
