@@ -1,5 +1,6 @@
 [
     {
+        "releaseNumber": 1,
         "releaseId": "RIB001",
         "artistName": "Leise Im Kran",
         "releaseName": "Leise Im Kran",
@@ -36,6 +37,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 2,
         "releaseId": "RIB002",
         "artistName": "Fractal Grooves",
         "releaseName": "Pixelated Paradox   ",
@@ -72,6 +74,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 3,
         "releaseId": "RIB003",
         "artistName": "Synaptic Symphony",
         "releaseName": "Echoes in the Quantum Flux",
@@ -108,6 +111,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 4,
         "releaseId": "RIB004",
         "artistName": "Aetherial Algorithms",
         "releaseName": "Aetherial Algorithms",
@@ -144,6 +148,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 5,
         "releaseId": "RIB005",
         "artistName": "DigiSurreal Chronicles",
         "releaseName": "Morphic Pulse",
@@ -180,6 +185,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 6,
         "releaseId": "RIB006",
         "artistName": "Chrono glitch",
         "releaseName": "Binary Reveries",
@@ -216,6 +222,7 @@
         "embeddedPlayerUrl": "https://bandcamp.com/EmbeddedPlayer/album=1598737731/size=large/bgcol=ffffff/linkcol=333333/artwork=small/transparent=true/"
     },
     {
+        "releaseNumber": 7,
         "releaseId": "RIB007",
         "artistName": "Nanotech Nocturnes",
         "releaseName": "Virtuoso Circuitry",

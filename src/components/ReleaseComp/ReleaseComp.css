@@ -36,6 +36,7 @@
   transition: 500ms;
   padding-left: 3rem;
   padding-right: 3rem;
+  gap: 2rem;
 }
 
 .release-title {
@@ -64,7 +65,6 @@
 }
 
 .release-comp-details {
-  min-width: 1200px;
   width: 100%;
 }
 
