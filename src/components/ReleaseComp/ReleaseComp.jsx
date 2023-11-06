@@ -14,10 +14,10 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
     const bgRef = useRef(null)
     let colorThief = new ColorThief();
     
-    const getTheColor = (palette) => {
-        const r = palette[0]
-        const g = palette[1]
-        const b = palette[2]
+    const getTheColor = (color) => {
+        const r = color[0]
+        const g = color[1]
+        const b = color[2]
 
         bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b}, 0.7)`
         
@@ -45,15 +45,6 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
     function rgbToHex(r, g, b) {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
-    
-    // useEffect(()=>{
-    //     // if (imgRef.current) {
-    //     //     if (imgRef.current.complete) {
-    //     // const palette = colorThief.getColor(imgRef.current)
-    //     // getTheColor(palette)
-    //     //     }
-    //     // }
-    // },[])
 
     return (       
         <details
