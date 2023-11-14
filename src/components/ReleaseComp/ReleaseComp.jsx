@@ -88,7 +88,7 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
                         crossOrigin='Anonymous'    
                         />
                     </div>
-                    {/* <BandcampPlayer release={release}/> */}
+                    <BandcampPlayer release={release}/>
                     <div className='release-comp-tracklist-container'>
                         <div className='release-comp-tracklist-inner'>
                             <ol className='release-tracklist-list'>
@@ -101,6 +101,22 @@ const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
                             <Link className='release-buy-btn btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
                         </div>
                         
+                    </div>
+                    <div className='mobile-release-comp-container'>
+                    <BandcampPlayer release={release}/>
+                    <div className='release-comp-tracklist-container'>
+                        <div className='release-comp-tracklist-inner'>
+                            <ol className='release-tracklist-list'>
+                                {release.tracklist.map(track => {
+                                    return (
+                                        <li key={uuid()} className='release-tracklist-list__element'>{track.trackName}</li>
+                                    )
+                                })}
+                            </ol>
+                            <Link className='release-buy-btn btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
+                        </div>
+                        
+                    </div>
                     </div>
                 </div>
                 
