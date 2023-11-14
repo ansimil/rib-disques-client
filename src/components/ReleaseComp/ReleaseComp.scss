@@ -2,7 +2,7 @@
 
 .release-comp-summary {
     width: 100%;
-    height: 65px;
+    // height: 65px;
     border-bottom: solid black 2px;
     display: flex;
     justify-content: flex-start;
@@ -11,15 +11,21 @@
     transition: 500ms;
     padding-left: 3rem;
     padding-right: 3rem;
+    gap: 2rem;
 }
 
-.release-comp-summary:hover {
-    background-color: rgba(0, 0, 0, 0.083);
+.release-comp-summary > * {
+    min-height: 65px;
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .release-title {
     flex: 1;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .release-release-id {
@@ -43,7 +49,7 @@
 }
 
 .release-comp-details {
-    min-width: 1200px;
+    // min-width: 1200px;
     width: 100%
 }
 
@@ -80,13 +86,46 @@
     aspect-ratio: 105 / 101.5;
 }
 
+.release-comp-details:not([open]) {
+    .release-comp-summary:hover {
+        background-color: rgba(0, 0, 0, 0.083) !important;
+    }
+    &:focus-visible {
+        border-bottom: none;
+        .release-comp-summary {
+            border-top: solid 2px blue;
+            border-bottom: solid 2px blue;
+            > * {
+                color: blue !important;
+            }
+        }
+    }
+    .release-comp-summary:focus-visible {
+        border-top: solid 2px blue;
+        border-bottom: solid 2px blue;
+        > * {
+            color: blue !important;
+        }
+    }
+}
+
 .release-comp-details[open] {
     border-bottom: solid black 2px;
-    .release-comp-summary {
-        background: black;
-        color: black; /* almost white */
-        // text-shadow:0 0 10px #00ff66, 0 0 20px #00ff66,
+    &:focus-visible {
+        border-bottom: none;
+        .release-comp-summary, .release-comp-summary:focus-visible {
+            border-top: solid 2px blue;
+            border-bottom: solid 2px blue;
+            > * {
+                color: blue;
+            }
+        }
     }
+    // .release-comp-summary {
+    //     // background: black;
+    //     // color: black; /* almost white */
+    //     // text-shadow:0 0 10px #00ff66, 0 0 20px #00ff66,
+    // }
     .dark-summary {
         color: white;
     }
@@ -96,3 +135,40 @@
     color: white;
 }
 
+@media screen and (min-width: 1040px){
+    .mobile-release-comp-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1040px){
+    .release-comp-artwork-container {
+        display: flex;
+        justify-content: center;
+    }
+    .bandcamp-player-container {
+        display: none;
+    }
+    .release-comp-details-inner {
+        .release-comp-tracklist-container {
+            display: none;
+        }
+    }
+    .mobile-release-comp-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        .release-comp-tracklist-container {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .bandcamp-player-container {
+            padding: 2rem 2rem;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    
+}

@@ -9,6 +9,19 @@
     border-bottom: solid black 2px;
 }
 
+.navbar-left-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.rib-navbar-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    border-left: solid black 1px;
+}
+
 .rib-navbar-logo {
     margin-left: 3rem;
     max-height: 60px;
@@ -39,12 +52,17 @@ to {
     flex: 1
 }
 
+.navbar-right-container {
+    height: 100%;
+}
+
 .navbar-right__links {
+    height: 100%;
     list-style: none;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    gap: 4rem;
+    gap: 2rem;
     margin-right: 4rem;
 }
 
@@ -57,4 +75,60 @@ to {
 
 .navbar-right__links a:hover {
     border-bottom: solid black 2px;
+}
+
+@media screen and (min-width: 485px) {
+    .releases-container {
+        .navbar-right-container {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 485px){
+    .navbar-container {
+        .navbar-right-container {
+            display: none;
+            
+        }
+    }
+    .releases-container {
+        .navbar-right-container {
+            display: flex;
+            margin-top: 3rem;
+            .navbar-right__links {
+                margin-right: 0;
+            }
+        }
+    }
+    .navbar-left-container {
+        flex: 0;
+        .rib-navbar-logo {
+            margin-left: 0;
+        }
+    }
+    
+    .release-comp-details-inner {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 680px){
+    .release-comp-summary {
+        .release-format {
+            display: none;
+        }
+        .release-year {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 485px){
+    .release-comp-summary {
+        .release-release-id {
+            display: none;
+        }
+    }
 }

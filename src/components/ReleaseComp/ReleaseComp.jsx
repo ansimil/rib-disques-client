@@ -5,26 +5,21 @@ import uuid from 'react-uuid';
 import Link from 'next/link';
 import './ReleaseComp.css';
 import ColorThief from 'colorthief/dist/color-thief.mjs';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import isDarkColor from 'is-dark-color';
 
 
-const ReleaseComp = ({ release, idx }) => {
-    const [ paletteState, setPaletteState ] = useState()
-    const [ paletteIdx, setPaletteIdx ] = useState()
-    const [ isOpen, setIsOpen ] = useState(false)
+const ReleaseComp = ({ release, idx, openStates, setOpenStates }) => {
     const imgRef = useRef(null)
     const bgRef = useRef(null)
     let colorThief = new ColorThief();
     
-    const getTheColor = (palette) => {
-        const i = Math.floor(Math.random() * (palette.length))
-        setPaletteIdx(i)
-        const r = palette[i][0]
-        const g = palette[i][1]
-        const b = palette[i][2]
+    const getTheColor = (color) => {
+        const r = color[0]
+        const g = color[1]
+        const b = color[2]
 
-        bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b}, 0.5)`
+        bgRef.current.style.backgroundColor = `rgb(${r}, ${g}, ${b}, 0.7)`
         
         if (isDarkColor(rgbToHex(r,g,b))){
             const parentEl = document.getElementById(`release${idx}`)
@@ -50,30 +45,21 @@ const ReleaseComp = ({ release, idx }) => {
     function rgbToHex(r, g, b) {
         return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
     }
-    
-    useEffect(()=>{
-        if (imgRef.current) {
-            if (imgRef.current.complete) {
-                const palette = colorThief.getPalette(imgRef.current, 4)
-                setPaletteState(palette)
-                getTheColor(palette)
-            }
-        }
-    },[])
-    
+
     return (       
         <details
         id={`release${idx}`}
         className="release-comp-details">
             <summary 
-            onClick={()=> {
+            onClick={()=> {                
+                const color = colorThief.getColor(imgRef.current)
+                getTheColor(color)
                 const parentEl = document.getElementById(`release${idx}`)
-                setIsOpen(!isOpen)
-                if (isOpen) {
+                if (parentEl.open) {
                     parentEl.firstChild.style.backgroundColor = "white"
                 }
                 else {
-                    parentEl.firstChild.style.backgroundColor = `rgb(${paletteState[paletteIdx][0]}, ${paletteState[paletteIdx][1]}, ${paletteState[paletteIdx][2]})`
+                    parentEl.firstChild.style.backgroundColor = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
                 }
                 const releaseEls = document.getElementsByClassName("release-comp-details")
                 const keys = Object.keys(releaseEls)
@@ -81,7 +67,6 @@ const ReleaseComp = ({ release, idx }) => {
                         if (releaseEls[key].id !== `release${idx}`){
                             releaseEls[key].open = false
                             releaseEls[key].firstChild.style.backgroundColor = "white"
-                            setIsOpen(false)
                         }
                 })
             }}
@@ -116,6 +101,22 @@ const ReleaseComp = ({ release, idx }) => {
                             <Link className='release-buy-btn btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
                         </div>
                         
+                    </div>
+                    <div className='mobile-release-comp-container'>
+                    <BandcampPlayer release={release}/>
+                    <div className='release-comp-tracklist-container'>
+                        <div className='release-comp-tracklist-inner'>
+                            <ol className='release-tracklist-list'>
+                                {release.tracklist.map(track => {
+                                    return (
+                                        <li key={uuid()} className='release-tracklist-list__element'>{track.trackName}</li>
+                                    )
+                                })}
+                            </ol>
+                            <Link className='release-buy-btn btn' href={release.bandcampUrl} target="_blank" rel="noopener noreferrer">Buy</Link>
+                        </div>
+                        
+                    </div>
                     </div>
                 </div>
                 

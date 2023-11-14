@@ -5,4 +5,13 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+}
+
+.rib-line-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  font-family: "__Inter_a64ecd", "__Inter_Fallback_a64ecd";
+  font-size: 2rem;
 }/*# sourceMappingURL=Releases.css.map */

@@ -27,7 +27,6 @@
 
 .release-comp-summary {
   width: 100%;
-  height: 65px;
   border-bottom: solid black 2px;
   display: flex;
   justify-content: flex-start;
@@ -36,15 +35,20 @@
   transition: 500ms;
   padding-left: 3rem;
   padding-right: 3rem;
+  gap: 2rem;
 }
 
-.release-comp-summary:hover {
-  background-color: rgba(0, 0, 0, 0.083);
+.release-comp-summary > * {
+  min-height: 65px;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .release-title {
   flex: 1;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .release-release-id {
@@ -68,7 +72,6 @@
 }
 
 .release-comp-details {
-  min-width: 1200px;
   width: 100%;
 }
 
@@ -104,12 +107,39 @@
   aspect-ratio: 105/101.5;
 }
 
+.release-comp-details:not([open]) .release-comp-summary:hover {
+  background-color: rgba(0, 0, 0, 0.083) !important;
+}
+.release-comp-details:not([open]):focus-visible {
+  border-bottom: none;
+}
+.release-comp-details:not([open]):focus-visible .release-comp-summary {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details:not([open]):focus-visible .release-comp-summary > * {
+  color: blue !important;
+}
+.release-comp-details:not([open]) .release-comp-summary:focus-visible {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details:not([open]) .release-comp-summary:focus-visible > * {
+  color: blue !important;
+}
+
 .release-comp-details[open] {
   border-bottom: solid black 2px;
 }
-.release-comp-details[open] .release-comp-summary {
-  background: black;
-  color: black; /* almost white */
+.release-comp-details[open]:focus-visible {
+  border-bottom: none;
+}
+.release-comp-details[open]:focus-visible .release-comp-summary, .release-comp-details[open]:focus-visible .release-comp-summary:focus-visible {
+  border-top: solid 2px blue;
+  border-bottom: solid 2px blue;
+}
+.release-comp-details[open]:focus-visible .release-comp-summary > *, .release-comp-details[open]:focus-visible .release-comp-summary:focus-visible > * {
+  color: blue;
 }
 .release-comp-details[open] .dark-summary {
   color: white;
@@ -117,4 +147,38 @@
 
 .dark-bg {
   color: white;
+}
+
+@media screen and (min-width: 1040px) {
+  .mobile-release-comp-container {
+    display: none;
+  }
+}
+@media screen and (max-width: 1040px) {
+  .release-comp-artwork-container {
+    display: flex;
+    justify-content: center;
+  }
+  .bandcamp-player-container {
+    display: none;
+  }
+  .release-comp-details-inner .release-comp-tracklist-container {
+    display: none;
+  }
+  .mobile-release-comp-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .mobile-release-comp-container .release-comp-tracklist-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile-release-comp-container .bandcamp-player-container {
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+  }
 }/*# sourceMappingURL=ReleaseComp.css.map */
