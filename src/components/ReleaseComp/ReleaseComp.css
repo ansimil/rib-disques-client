@@ -52,14 +52,9 @@
 }
 
 .release-release-id {
-  font-weight: 800;
   flex: 0.5;
   justify-content: flex-start;
   padding-left: 0.8rem;
-}
-
-.release-artist-name {
-  font-weight: 800;
 }
 
 .release-year {
