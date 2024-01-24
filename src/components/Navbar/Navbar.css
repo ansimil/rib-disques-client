@@ -6,29 +6,47 @@
   height: 100px;
   border-bottom: solid black 2px;
 }
-
-.navbar-left-container {
+.navbar-container > * {
+  flex: 1;
+}
+.navbar-container-inner-left {
   display: flex;
   gap: 1rem;
 }
-
-.rib-navbar-text {
+.navbar-container-inner-right {
+  height: 100%;
+}
+.navbar-container-inner-right__links {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+.navbar-container-inner-right__links a {
+  color: black;
+  padding: 1rem 0;
+  font-weight: 800;
+}
+.navbar-container-inner-right__links a:hover {
+  border-bottom: solid black 2px;
+}
+.navbar-rib-text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 25px;
   border-left: solid black 1px;
 }
-
-.rib-navbar-logo {
+.navbar-rib-logo {
   margin-left: 3rem;
   max-height: 80px;
   aspect-ratio: 1/1;
   cursor: pointer;
 }
-
-.rib-navbar-logo:hover {
-  /* animation properties */
+.navbar-rib-logo:hover {
   animation-name: my-animation;
   animation-duration: 0.5s;
   animation-direction: alternate;
@@ -44,55 +62,27 @@
     transform: scale(1.1);
   }
 }
-.navbar-container > * {
-  flex: 1;
-}
-
-.navbar-right-container {
-  height: 100%;
-}
-
-.navbar-right__links {
-  height: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  gap: 2rem;
-  margin-right: 4rem;
-}
-
-.navbar-right__links a {
-  color: black;
-  padding: 1rem 0;
-  font-weight: 800;
-}
-
-.navbar-right__links a:hover {
-  border-bottom: solid black 2px;
-}
-
 @media screen and (min-width: 485px) {
-  .releases-container .navbar-right-container {
+  .releases-container .navbar-container-inner-right {
     display: none;
   }
 }
 @media screen and (max-width: 485px) {
-  .navbar-container .navbar-right-container {
+  .navbar-container-inner-right {
     display: none;
   }
-  .releases-container .navbar-right-container {
+  .navbar-container-inner-left {
+    flex: 0;
+  }
+  .navbar-rib-logo {
+    margin-left: 0;
+  }
+  .releases-container .navbar-container-inner-right {
     display: flex;
     margin-top: 3rem;
   }
-  .releases-container .navbar-right-container .navbar-right__links {
+  .releases-container .navbar-container-inner-right__links {
     margin-right: 0;
-  }
-  .navbar-left-container {
-    flex: 0;
-  }
-  .navbar-left-container .rib-navbar-logo {
-    margin-left: 0;
   }
   .release-comp-details-inner {
     flex-direction: column;
