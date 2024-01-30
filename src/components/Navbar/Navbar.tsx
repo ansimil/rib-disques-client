@@ -38,7 +38,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link title="Soundcloud" href="https://soundcloud.com/user-2976049" target="_blank">
+              <Link title="Soundcloud" href="https://soundcloud.com/ribdisques" target="_blank">
                 <Image src="https://res.cloudinary.com/dxvof8226/image/upload/v1699167297/2643216_artist_music_network_share_social_icon_gucdgq.png" alt="bandcamp" width={width} height={height}/>
               </Link>
             </li>
