@@ -1,7 +1,7 @@
 'use client'
 
 import { useRouter } from 'next/navigation';
-
+import Canvas from '../components/Canvas/Canvas';
 
 export default function HomeLogo() {
   const router = useRouter()
@@ -15,6 +15,7 @@ export default function HomeLogo() {
           router.push('/home')
         }} 
       />
+      {/* <Canvas /> */}
     </div>
   )
 }
