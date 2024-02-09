@@ -12,21 +12,21 @@ const Navbar = () => {
 
   return (
     <div className='navbar-container'>
-        <div className='navbar-left-container'>
+        <div className='navbar-container-inner-left'>
           <img 
-          className="rib-navbar-logo" 
+          className="navbar-rib-logo" 
           src="https://res.cloudinary.com/dxvof8226/image/upload/v1705831305/Trans_RIB_LOGO_vmvnqi.png"
           onClick={()=> {
             router.push('/home')
           }} 
           />
-          <div className='rib-navbar-text'>
+          <div className='navbar-rib-text'>
             <p>rib</p>
             <p>disques</p>
           </div>
         </div>
-        <div className='navbar-right-container'>
-          <ul className='navbar-right__links'>
+        <div className='navbar-container-inner-right'>
+          <ul className='navbar-container-inner-right__links'>
             <li>
               <Link href="mailto:info@ribdisques.com">
                 <Image src="https://res.cloudinary.com/dxvof8226/image/upload/v1699134559/7693324_telegram_social_media_logo_messenger_icon_llxvt0.png" alt="contact us" width={width} height={width}/>
@@ -38,7 +38,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link title="Soundcloud" href="https://soundcloud.com/user-2976049" target="_blank">
+              <Link title="Soundcloud" href="https://soundcloud.com/ribdisques" target="_blank">
                 <Image src="https://res.cloudinary.com/dxvof8226/image/upload/v1699167297/2643216_artist_music_network_share_social_icon_gucdgq.png" alt="bandcamp" width={width} height={height}/>
               </Link>
             </li>

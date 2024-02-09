@@ -52,6 +52,10 @@
     animation-iteration-count: infinite;
     animation-timing-function: linear;
   }
+
+  .canvas-container {
+    cursor: pointer;
+  }
   
   @keyframes my-animation {
     from {

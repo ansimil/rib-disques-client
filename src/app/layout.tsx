@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Rib Disques',
-  description: 'Purveyors of fine electronic music',
+  description: 'Berlin-Sydney based independent label for digital and physical releases of electronic music',
 }
 
 export default function RootLayout({
